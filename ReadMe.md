@@ -29,13 +29,22 @@
 - Number of columns: 10
 
 ## Columns
-- `Rank`: int64
-- `Time`: object
-- `Name`: object
-- `Country`: object
-- `Date of Birth`: object
-- `Place`: float64
-- `City`: object
-- `Date`: object
-- `Gender`: object
-- `Event`: object
+
+`Rank`: int64
+`Time`: object
+`Name`: object
+`Country`: object
+`Date of Birth`: datetime64
+`Place`: float64
+`City`: object
+`Date`: datetime64
+`Gender`: object
+`Event`: object
+## Converted Time_S column to float64 (seconds)
+dtype: object
+0 100.910
+1 101.010
+2 101.090
+3 101.110
+4 101.240
+Name: Time_s, dtype: float64
