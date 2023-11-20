@@ -1,0 +1,29 @@
+The evolution and current state of Olympic running.
+-------
+1. Age Distribution by Event:
+
+The athletes age vary across events. Younger athlets compete more in shorter sprints...
+
+Good starting point as it grounds the viewer/reader in the human aspect of the sport. We are focusing on the athlets themselves.
+
+-------
+2. Pace by Event
+
+We compare the the intense speed in 100m to the strategic pacing in marathons. It shows the different
+athletic skills and strategies.
+
+Following age with pace maintains the focus on athletic performance.
+
+-------
+3. Records by Countries
+We can identify which countries dominate which events and ask why (training, climate, infrastructure, etc.)
+
+Changing from individual performance to a country-level view broadens the perspective. Introduces a socio-cultural dimension.
+It provides insight into regional strengths.
+
+-------
+4. World Record Progression
+We conclude with how world records in these events changed over the years. This shows the advancements in
+training, nutrition, technology and human limits.
+
+We end with historical progression of world records.

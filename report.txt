@@ -1,0 +1,18 @@
+What should a report contain:
+- your motivation for picking up the topic
+
+- description of the exploratory work you did (data exploration, an actual data analysis, but also
+doing a review of similar work that has been already done with citations - these don’t have to be
+peer-reviewed papers, but can also be web-apps, journal articles etc.)
+
+- short description of the target audience of your visualizations and how it influenced your choices
+
+- explanation why you chose particular chart types and other visualization elements like colors,
+annotations, insets, styling
+
+- list of libraries and packages you used with a short motivation why you used those and not the
+alternatives
+
+- citations for the data source and other relevant sources
+
+- A table summarizing who did when and how long what task during the project phase
