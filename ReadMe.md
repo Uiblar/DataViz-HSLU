@@ -30,16 +30,16 @@
 
 ## Columns
 
-`Rank`: int64
-`Time`: object
-`Name`: object
-`Country`: object
-`Date of Birth`: datetime64
-`Place`: float64
-`City`: object
-`Date`: datetime64
-`Gender`: object
-`Event`: object
+`Rank`: int64  
+`Time`: object  
+`Name`: object  
+`Country`: object  
+`Date of Birth`: datetime64  
+`Place`: float64  
+`City`: object  
+`Date`: datetime64  
+`Gender`: object  
+`Event`: object  
 ## Converted Time_S column to float64 (seconds)
 dtype: object
 0 100.910
