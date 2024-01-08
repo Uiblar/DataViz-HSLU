@@ -7480,7 +7480,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -7496,7 +7496,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the data</span>
@@ -7514,7 +7514,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
@@ -7614,7 +7614,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenate all the data frames in the list to create a single data frame with cumulative data</span>
@@ -7633,7 +7633,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'#ffffb2'</span><span class="p">,</span> <span class="s1">'#fed976'</span><span class="p">,</span><span class="s1">'#feb24c'</span><span class="p">,</span><span class="s1">'#fd8d3c'</span><span class="p">,</span><span class="s1">'#f03b20'</span><span class="p">,</span><span class="s1">'#bd0026'</span><span class="p">]</span>
@@ -7647,22 +7647,22 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Convert matplotlib colormap to Plotly</span>
-<span class="k">def</span> <span class="nf">matplotlib_to_plotly</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">pl_entries</span><span class="p">):</span>
-    <span class="n">h</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">pl_entries</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">pl_colorscale</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># # Convert matplotlib colormap to Plotly</span>
+<span class="c1"># def matplotlib_to_plotly(cmap, pl_entries):</span>
+<span class="c1">#     h = 1.0/(pl_entries-1)</span>
+<span class="c1">#     pl_colorscale = []</span>
     
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pl_entries</span><span class="p">):</span>
-        <span class="n">C</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">h</span><span class="p">)[:</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="mi">255</span><span class="p">))</span>
-        <span class="n">pl_colorscale</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">k</span><span class="o">*</span><span class="n">h</span><span class="p">,</span> <span class="s1">'rgb'</span><span class="o">+</span><span class="nb">str</span><span class="p">((</span><span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">]))])</span>
+<span class="c1">#     for k in range(pl_entries):</span>
+<span class="c1">#         C = list(map(np.uint8, np.array(cmap(k*h)[:3])*255))</span>
+<span class="c1">#         pl_colorscale.append([k*h, 'rgb'+str((C[0], C[1], C[2]))])</span>
         
-    <span class="k">return</span> <span class="n">pl_colorscale</span>
+<span class="c1">#     return pl_colorscale</span>
 
-<span class="c1"># Apply the conversion function</span>
-<span class="n">plotly_cmap</span> <span class="o">=</span> <span class="n">matplotlib_to_plotly</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="c1"># # Apply the conversion function</span>
+<span class="c1"># plotly_cmap = matplotlib_to_plotly(cmap, 100)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">cumulative_data</span><span class="p">,</span>
                     <span class="n">locations</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span>
@@ -7679,10 +7679,108 @@ a.anchor-link {
 <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"t"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"l"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
 
 
-<span class="n">fig</span><span class="o">.</span><span class="n">update_geos</span><span class="p">(</span><span class="n">showcoastlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">coastlinecolor</span><span class="o">=</span><span class="s2">"White"</span><span class="p">,</span> <span class="n">showland</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">landcolor</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_geos</span><span class="p">(</span><span class="n">showcoastlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">coastlinecolor</span><span class="o">=</span><span class="s2">"White"</span><span class="p">,</span>
+                <span class="n">showland</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">landcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+                <span class="n">showcountries</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">countrycolor</span><span class="o">=</span><span class="s2">"Lightgrey"</span><span class="p">,)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"t"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"l"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
 
 <span class="c1"># Step 4: Display the Map</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Step 5: Save the map as a HTML file</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">"choropleth_map.html"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Reset the index and ensure 'Year' is only a column</span>
+<span class="n">cumulative_data</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Recalculate cumulative sum and percentages</span>
+<span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'CumulativeCount'</span><span class="p">]</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Country'</span><span class="p">,</span> <span class="s1">'Year'</span><span class="p">])[</span>
+    <span class="s1">'Count'</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'YearlyTotal'</span><span class="p">]</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="s1">'Year'</span><span class="p">)[</span><span class="s1">'CumulativeCount'</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">'sum'</span><span class="p">)</span>
+<span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'Percentage'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'CumulativeCount'</span><span class="p">]</span> <span class="o">/</span> <span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'YearlyTotal'</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Create the choropleth map with percentage data</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">cumulative_data</span><span class="p">,</span>
+                    <span class="n">locations</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span>
+                    <span class="n">locationmode</span><span class="o">=</span><span class="s1">'ISO-3'</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span>  <span class="c1"># Use the new percentage column</span>
+                    <span class="n">hover_name</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span>
+                    <span class="n">animation_frame</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span>
+                    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s1">'Cumulative Top Performances by Country Over the Years (Cumulative %)'</span><span class="p">,</span>
+                    <span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>  <span class="c1"># Set the color scale range from 0 to 100%</span>
+
+<span class="c1"># Update geos and layout</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_geos</span><span class="p">(</span><span class="n">showcoastlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">coastlinecolor</span><span class="o">=</span><span class="s2">"White"</span><span class="p">,</span>
+                <span class="n">showland</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">landcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+                <span class="n">showcountries</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">countrycolor</span><span class="o">=</span><span class="s2">"Lightgrey"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"t"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"l"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+
+<span class="c1"># Display and save the map</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">"choropleth_map_percentage.html"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="c1"># Filter the DataFrame for the selected countries</span>
+<span class="n">selected_countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'USA'</span><span class="p">,</span> <span class="s1">'KEN'</span><span class="p">,</span> <span class="s1">'ETH'</span><span class="p">,</span> <span class="s1">'RUS'</span><span class="p">]</span>
+<span class="n">filtered_data</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="p">[</span><span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span>
+    <span class="n">selected_countries</span><span class="p">)]</span>
+
+<span class="c1"># Create the line chart</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">,</span>
+              <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span>
+              <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span>
+              <span class="n">title</span><span class="o">=</span><span class="s1">'Cumulative Performance by Year for Selected Countries'</span><span class="p">)</span>
+
+<span class="c1"># Display the chart</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7695,6 +7793,207 @@ a.anchor-link {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="c1"># Filter the DataFrame for the selected countries</span>
+<span class="n">selected_countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'USA'</span><span class="p">,</span> <span class="s1">'RUS'</span><span class="p">,</span> <span class="s1">'KEN'</span><span class="p">,</span> <span class="s1">'ETH'</span><span class="p">]</span>
+<span class="n">filtered_data</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="p">[</span><span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span>
+    <span class="n">selected_countries</span><span class="p">)]</span>
+
+<span class="c1"># Convert Year to Decade and format it</span>
+<span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">s"</span><span class="p">)</span>
+
+<span class="c1"># Exclude the 1960s</span>
+<span class="n">filtered_data</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="p">[</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'1960s'</span><span class="p">]</span>
+
+<span class="c1"># Group data by Decade and Country</span>
+<span class="n">grouped_data</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Decade'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+    <span class="s1">'Count'</span><span class="p">:</span> <span class="s1">'sum'</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Normalize to percentage for each decade</span>
+<span class="n">grouped_data</span><span class="p">[</span><span class="s1">'TotalByDecade'</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="s1">'Decade'</span><span class="p">)[</span><span class="s1">'Count'</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">'sum'</span><span class="p">)</span>
+<span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Percentage'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Count'</span><span class="p">]</span> <span class="o">/</span> <span class="n">grouped_data</span><span class="p">[</span><span class="s1">'TotalByDecade'</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Specify the order of countries</span>
+<span class="n">country_order</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span>
+    <span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">selected_countries</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span> <span class="o">=</span> <span class="n">country_order</span>
+
+<span class="c1"># Create the bar chart</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">grouped_data</span><span class="p">,</span>
+             <span class="n">x</span><span class="o">=</span><span class="s1">'Decade'</span><span class="p">,</span>
+             <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span>
+             <span class="n">color</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span>
+             <span class="n">category_orders</span><span class="o">=</span><span class="p">{</span><span class="s2">"Country"</span><span class="p">:</span> <span class="n">selected_countries</span><span class="p">},</span>
+             <span class="n">barmode</span><span class="o">=</span><span class="s1">'group'</span><span class="p">,</span>
+             <span class="n">title</span><span class="o">=</span><span class="s1">'Percentage of Cumulative Records by Country and Decade (Excluding 1960s)'</span><span class="p">)</span>
+
+<span class="c1"># Display the chart</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\Users\Jonas\AppData\Local\Temp\ipykernel_16032\1203857136.py:10: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+C:\Users\Jonas\AppData\Local\Temp\ipykernel_16032\1203857136.py:11: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+c:\Temp\dataviz\.venv\Lib\site-packages\plotly\express\_core.py:2044: FutureWarning:
+
+The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># Filter the DataFrame for the selected countries</span>
+<span class="n">selected_countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'USA'</span><span class="p">,</span> <span class="s1">'RUS'</span><span class="p">,</span> <span class="s1">'KEN'</span><span class="p">,</span> <span class="s1">'ETH'</span><span class="p">]</span>
+<span class="n">filtered_data</span> <span class="o">=</span> <span class="n">cumulative_data</span><span class="p">[</span><span class="n">cumulative_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span>
+    <span class="n">selected_countries</span><span class="p">)]</span>
+
+<span class="c1"># Convert Year to Decade and format it</span>
+<span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">s"</span><span class="p">)</span>
+
+<span class="c1"># Exclude the 1960s</span>
+<span class="n">filtered_data</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="p">[</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">'Decade'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'1960s'</span><span class="p">]</span>
+
+<span class="c1"># Group data by Decade and Country</span>
+<span class="n">grouped_data</span> <span class="o">=</span> <span class="n">filtered_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Decade'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+    <span class="s1">'Count'</span><span class="p">:</span> <span class="s1">'sum'</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Normalize to percentage for each decade</span>
+<span class="n">grouped_data</span><span class="p">[</span><span class="s1">'TotalByDecade'</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="s1">'Decade'</span><span class="p">)[</span><span class="s1">'Count'</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">'sum'</span><span class="p">)</span>
+<span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Percentage'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">grouped_data</span><span class="p">[</span><span class="s1">'Count'</span><span class="p">]</span> <span class="o">/</span> <span class="n">grouped_data</span><span class="p">[</span><span class="s1">'TotalByDecade'</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Ensure every country has a record for each decade</span>
+<span class="n">pivot_data</span> <span class="o">=</span> <span class="n">grouped_data</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s1">'Decade'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pivot_data</span> <span class="o">=</span> <span class="n">pivot_data</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">selected_countries</span><span class="p">)</span>  <span class="c1"># Reorder columns</span>
+
+<span class="c1"># Create the bar chart using Matplotlib</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Bar width</span>
+<span class="n">bar_width</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="c1"># Colors</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">]</span>
+
+<span class="c1"># Plotting</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected_countries</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pivot_data</span><span class="p">))</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">bar_width</span><span class="p">,</span>
+           <span class="n">pivot_data</span><span class="p">[</span><span class="n">country</span><span class="p">],</span>
+           <span class="n">width</span><span class="o">=</span><span class="n">bar_width</span><span class="p">,</span>
+           <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">,</span>
+           <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="c1"># Set the x-ticks to be in the middle of the group of bars</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pivot_data</span><span class="p">))</span> <span class="o">+</span> <span class="n">bar_width</span> <span class="o">*</span>
+              <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_countries</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">pivot_data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1"># Adding labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Decade'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Percentage'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
+    <span class="s1">'Percentage of Cumulative Records by Country and Decade (Excluding 1960s)'</span><span class="p">)</span>
+
+<span class="c1"># Add a legend</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\Users\Jonas\AppData\Local\Temp\ipykernel_16032\1104946758.py:12: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+C:\Users\Jonas\AppData\Local\Temp\ipykernel_16032\1104946758.py:13: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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FSpUSIMHD1ZsbGyqtvu8efPs2zhPnjx69tlnHS7Datiwobp37y5Jqlatmmw2222vB58wYYIuX76sadOmOQSkRCVLllT//v0lScePH0/xUgKbzaYRI0bY/068zv7w4cN69tln5efnp4CAAL3zzjsyxujkyZNq06aNfH19FRQUpA8//NBhfindE5Taa88/+OAD1a5dW7lz55anp6eqVKmi+fPnJ6nzlStX9M0339jf+8RtdevyW7duneIXRq1ateyBJlFq9oW7Ua9ePUly2Bck6eDBg3r66afl7+8vDw8PVa1aNdlLJS5evKgBAwaoaNGicnd3V8GCBdWtWzedO3fOPk5kZKSef/55BQYGysPDQxUrVtQ333zjMJ/ENvDBBx/o448/VokSJeTu7q79+/dLktavX69q1arJw8NDJUqU0BdffJHs+qxcuVJ169ZVzpw55ePjozJlytg/B1Jj1qxZKlOmjDw8PFSlShWtW7fOPmz16tWy2Wz68ccfk0w3e/Zs2Ww2bdy4McV5f/HFF/r77781ceLEJAFJkgIDA/X22287lE2ePFmPPPKI3N3dlT9/fvXp0yfJJXkp3Ztx6+dEYhufO3eu3nvvPRUsWFAeHh5q0qSJjh496jDdzz//rL/++svefhPPhifOY86cOXr77bdVoEABeXl5aefOnbLZbProo4+S1GPDhg2y2Wz6/vvvU9w2cXFxGjZsmKpUqSI/Pz95e3urXr16Wr16tcN41nby5Zdf2ttJtWrVtGXLliTzXbRokcqXLy8PDw+VL18+2ffubrm4uOiTTz5RuXLl9NlnnykqKspheGr30c2bN6tly5bKlSuXvL299eijj2rSpEn24bt371aPHj3slyoHBQXpueee0/nz55PMK7X7x93U71bh4eHavXt3qq4iSM6BAwfk6emZ5GzT+vXr5eLioiFDhtjLEhISNGnSJFWoUEEeHh4KCAhQ8+bNtXXr1hTnn9I9WMl95htj9O6776pgwYLy8vJSo0aNtG/fviTTJve9kPhbY//+/WrUqJG8vLxUoEABTZgwIcn0f/31l5588kl5e3srb968GjBggFasWJGq7xp3d3cFBQXddhxJ2rhxo+Lj49WpUyeH8sS/58yZYy/79ddftXfvXg0fPlyenp66evVqsr87JGnBggVq3bq1PSBJUkhIiEqXLq25c+fay65fv66RI0eqVKlS8vDwUO7cuVW3bt0kl6QmtpvFixffcZ2QFGeSIOn/fqzlzp1b0s2jq++88446dOigXr166Z9//tGnn36q+vXra8eOHQ5nNc6fP68WLVqoU6dOevbZZxUYGKgbN26odevWWrVqlTp16qT+/fvr0qVLWrlypfbu3asSJUpIkl588UXNnDlTPXv2VL9+/RQeHq7PPvtMO3bs0B9//OFwScXRo0f19NNP6/nnn1f37t01ffp09ejRQ1WqVNEjjzyi+vXrq1+/fvrkk0/05ptvqmzZspJk/3fmzJny8fHRwIED5ePjo99//13Dhg1TdHS03n//fftypkyZor59+6pevXoaMGCAjh8/rrZt2ypXrlwqWLCgfbyEhAQ9+eSTWr9+vXr37q2yZctqz549+uijj3T48OE73huTuN7VqlXT2LFjdfbsWU2aNEl//PGHfRu/9dZbKlOmjL788kv7JVuJ2y45P/30k4oXL67atWun4l2/ex07dlTZsmU1btw4/fzzz3r33Xfl7++vL774Qo0bN9b48eM1a9Ysvf7666pWrZrq16+fLsudNGmSnnzySXXp0kVxcXGaM2eO2rdvr6VLl6pVq1aSpP/+97/q1auXqlevbj/altK26tixo7p166YtW7Y4HCn866+/tGnTJof2cDf7Qmol/nDIlSuXvWzfvn2qU6eOChQooDfeeEPe3t6aO3eu2rZtqwULFuipp56SdPOa+Xr16unAgQN67rnnVLlyZZ07d05LlizRqVOnlCdPHl27dk0NGzbU0aNH1bdvXxUrVkzz5s1Tjx49dPHiRXtQTjRjxgzFxMSod+/ecnd3l7+/v/bs2aOmTZsqICBAI0aMUHx8vIYPH67AwECHafft26fWrVvr0Ucf1ahRo+Tu7q6jR4/qjz/+SNW2WLt2rX744Qf169dP7u7umjx5spo3b64///xT5cuXV8OGDVWoUCHNmjXLvg0SzZo1SyVKlFCtWrVSnP+SJUvk6empp59+OlX1GTFihEaOHKmQkBC9/PLLOnTokKZMmaItW7Yk+Uy6G+PGjVO2bNn0+uuvKyoqShMmTFCXLl20efNmSdJbb72lqKgonTp1yh56fHx8HOYxevRoubm56fXXX1dsbKyCg4NVp04dzZo1SwMGDHAYd9asWcqRI4fatGmTYp2io6P19ddfq3PnznrhhRd06dIl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evrpp1PVqUByyyhdurSuXr2qf/75R0FBQQoODla1atU0a9YseyCfNWuWatasmWRfvZWvr2+q94mU9ks3NzcVL148yXa7G7fuO4lhI7WfX1LS90m6+WPpiSee0OzZszV69GhJN7dNgQIF7Adsbuebb77Rhx9+qIMHD+r69eu3Xdad1iFx+6TUbtJ6UMMq8QdnYvBN7T6aeEl5+fLlbzv/CxcuaOTIkZozZ06Sz/DE74m72T/S6zMkJQULFkzV/UolSpTQiBEjNGjQIJUvXz7J50xYWJjy589vv/QrvaXUNgICApIcgExJwYIFk3zm58qVS7t373ZYTokSJZKMd6fPibRYsGCBOnbsqOeee07SzYMOAwcO1Nq1a3Xo0CH7eInB+9ZOsZ555hkNHTpUGzZsUEhIiH285O5pjomJcZjXqFGj1KZNG5UuXVrly5dX8+bN1bVrVz366KNJpjXGZMizux4GhKSHVPXq1VO8xjghIUE2m03Lli1LtkewW49o3a6nlttJSEhQ3rx5HY6AWt0aPlLqncx6JiAlFy9eVIMGDeTr66tRo0apRIkS8vDw0Pbt2zVkyJA0HQFPSEhQhQoVNHHixGSHFypU6K7neS98fX2VP39+7d27N1Xjp/ShmdINpVLy70Fq3pe0LCvR//73Pz355JOqX7++Jk+erHz58snV1VUzZszQ7Nmz7zh9Sp544gl5eXlp7ty5ql27tubOnats2bLZO/+Q7n5fSIl1f2vbtq3q1q2rZ555RocOHZKPj4+9/b3++utJjkQnyogv+URp3YcTp123bp1Wr16tn3/+WcuXL9cPP/ygxo0b69dff023XgW7deum/v3769SpU4qNjdWmTZv02Wef3XG64OBg7dy5U3FxcenaY9/t2nRa95M7Sel96tatm+bNm6cNGzaoQoUKWrJkif7zn//cMaR+99136tGjh9q2batBgwYpb968cnFx0dixY5N0KpJe63CvEj/fEveH9NpHE3Xo0EEbNmzQoEGDVKlSJfv+2bx58zR/T9xL/XLnzq34+HhdunTpnq8SSOzm/vTp0zp//nyqOii4k3v5bL9bWaH9WRUoUEDr16/XkSNHFBERoVKlSikoKEj58+d36II9f/78kpTkfrXEA8SJBxkSO1s6c+ZMkmWdOXNG/v7+9oNr9evXV1hYmBYvXqxff/1VX3/9tT766CNN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bNlSOXLk0Ouvvy4XF5ck9/qkx76QkkGDBql9+/aaOXOmXnrpJX3++eeqW7euKlSooBdeeEHFixfX2bNntXHjRp06dUq7du2yTzd//ny1b99ezz33nKpUqaILFy5oyZIlmjp1qipWrKjevXvriy++UI8ePbRt2zYVLVpU8+fP1x9//KGPP/44VZftjBw5UsuXL1e9evX0n//8xx6yHnnkEYftPmrUKK1bt06tWrVSkSJFFBkZqcmTJ6tgwYL2o/23U758eTVr1syhC/DE5d+qW7du9s+E5A6uJCdXrlz68ccf1bJlS1WqVEnPPvusvaOI7du36/vvv7f/EA0ICNDQoUM1cuRINW/eXE8++aQOHTqkyZMnq1q1ag43jffq1Uvz589X8+bN1aFDB4WFhem77767bRf9d1KlShX98MMPGjhwoKpVqyYfHx/7AynvpFu3bvrkk0+0evXqVD9otXXr1lq4cKGeeuoptWrVSuHh4Zo6darKlStnv/fnbo0dO1atWrVS3bp19dxzz+nChQv2dpPaeUZFRem7776TdPPh5EePHtXChQsVFhamTp06Obz3qd1Hs2XLpilTpuiJJ55QpUqV1LNnT+XLl08HDx7Uvn37tGLFCvn6+qp+/fqaMGGCrl+/rgIFCujXX39NcsWBlPr9414/Q4oXL67y5cvrt99+s9/7YnX48GH7trIKDAzU448/LmOMnnvuOXl6emrKlCmSbj56Y8GCBerfv79CQkKUP39+NWrUSF27dtUnn3yiI0eO2C8v/N///qdGjRqpb9++ydavadOmKly4sJ5//nkNGjRILi4umj59ugICAhwCZEBAgF5//XWNHTtWrVu3VsuWLbVjxw4tW7YsXS8Fe/HFF/XZZ5+pc+fO6t+/v/Lly6dZs2bZOz5Izdnazz77TBcvXrSf6fnpp5906tQpSdIrr7xi75Skf//+iomJUaVKlXT9+nXNnj1bf/75p7755huH+/eCgoL01ltvadiwYWrevLnatm2rXbt26auvvlLnzp0dHkPx5ptvat68eWrUqJH69++vy5cv6/3331eFChUcOsgqV66cGjZsqCpVqsjf319bt27V/Pnzk7xPv/32m4wxt30UAG4jA3vOQxaU2u6kjTFmwYIFpm7dusbb29t4e3ub4OBg06dPH3Po0CH7OLfrrvXq1avmrbfeMsWKFTOurq4m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2lV79uxR1apV9emnn2buyiJDpeZzqWnTpgoLC1NkZKTOnTun//73v/r777/t49CWHh59+/bV0qVLtXr1ahUsWNBeHhQUpLi4OF28eNFh/LNnz9rbQGq+v1Iax9fXV56ennJxcdHKlSu1bNkylStXTp9++qnKlCmj8PDw9F5VZLB7aUupkZr2NmPGDG3cuNF+eXrp0qW1adOmNK4RknDyPVHIonTLDdLJOXz4sMmWLZtZsWJFkmENGjQwoaGhScoTb3w9e/asveyLL74wvr6+JiYmJtnldOrUyTzxxBN3twLIMtLSlnbv3m0kmf379zuM17RpU/PCCy8YY/7vZvutW7fah69YscLhZvtbvfHGG6ZChQr3sDZwpnv9XEq0atUqY7PZzMGDB40xtKWHQUJCgunTp4/Jnz+/OXz4cJLhiTfbz58/31528ODBZDtuuN331+DBg0358uUd5t25c2eHjhus4uPjTYECBcyHH354z+uIzJEebcnqTh03xMXF2cuGDh3q0HHDrWrWrGleeeWVu1wjpISQBLtLly6ZHTt2mB07dhhJZuLEiWbHjh3mr7/+MsYYM3fuXLN69WoTFhZmFi1aZIoUKWLatWuXZD5HjhwxNpvNLFu2LMmw+Ph4U758edO0aVOzc+dOs3z5chMQEGCGDh1qjDHm6tWrpk+fPmb16tXm+PHjZv369aZEiRJm8ODBGbvySFf32pbi4uJMyZIlTb169czmzZvN0aNHzQcffGBsNptDj2LNmzc3jz32mNm8ebNZv369KVWqlOncubN9eP/+/c3y5cvNsWPHzLZt20yNGjVMhw4dMm9D4J6lx+fS9OnTzcaNG83Ro0fNf//7X+Pv728GDhzoMA5t6cH28ssvGz8/P7NmzRpz5swZ++vq1av2cV566SVTuHBh8/vvv5utW7eaWrVqmVq1atmH3+n7yxhjjh07Zry8vMygQYPMgQMHzOeff25cXFzM8uXLjTHGbNq0ybz33ntmy5Yt5q+//jJz5841bm5u5pdffsm8jYF7kh5tyZibv5V27NhhXnzxRVO6dGn751xib3YXL140gYGBpmvXrmbv3r1mzpw5xsvLy3zxxRfGmJtt7Y033jAbNmwwx48fNytWrDC5c+c2kydPzryN8YAjJMFu9erVRlKSV/fu3Y0xxkyaNMkULFjQuLq6msKFC5u3337boWvKREOHDjWFChUyN27cSHY5x48fNy1atDCenp4mT5485rXXXjPXr183xhgTGxtrOnXqZAoVKmTc3NxM/vz5Td++fc21a9cybL2R/tKjLR0+fNi0a9fO5M2b13h5eZlHH300SZfg58+fN507dzY+Pj7G19fX9OzZ01y6dMk+vG/fvqZEiRLG3d3dBAQEmK5du5pz585l+Poj/aRHWxoyZIgJDAw0rq6uplSpUubDDz80CQkJDuPQlh5sybUhSWbGjBn2ca5du2b+85//mFy5chkvLy/z1FNPmTNnzjjM53bfX4lWr15tKlWqZNzc3Ezx4sUdlrF//37TrFkzExAQYNzd3U3p0qXNp59+mpGrjnSWXm2pQYMGyc4nPDzcPs6uXbtM3bp1jbu7uylQoIAZN26cfVhERIRp27atyZcvn3FzczNFihQxw4YNS/G3F+6ezRj6nQQAAACARHTcAAAAAAAWhCQAAAAAsCAkAQAAAIAFIQkAAAAALAhJAAAAAGBBSAIAAAAAC0ISAAAAAFgQkgAAAADAgpAEAMBtrFmzRjabTRcvXnR2VQAAmYSQBABwuh49eshms8lms8nV1VWBgYF6/PHHNX36dCUkJDi7egCAhwwhCQCQJTRv3lxnzpzR8ePHtWzZMjVq1Ej9+/dX69atFR8f7+zqAQAeIoQkAECW4O7urqCgIBUoUECVK1fWm2++qcWLF2vZsmWaOXOmJOnixYvq1auXAgIC5Ovrq8aNG2vXrl0O8/npp59UrVo1eXh4KE+ePHrqqafsw/773/+qatWqypEjh4KCgvTMM88oMjLSYfpffvlFpUuXlqenpxo1aqTjx48nqev69etVr149eXp6qlChQurXr5+uXLmS7tsEAOAchCQAQJbVuHFjVaxYUQsXLpQktW/fXpGRkVq2bJm2bdumypUrq0mTJrpw4YIk6eeff9ZTTz2lli1baseOHVq1apWqV69un9/169c1evRo7dq1S4sWLdLx48fVo0cP+/CTJ0+qXbt2euKJJ7Rz50716tVLb7zxhkOdwsLC1Lx5c4WGhmr37t364YcftH79evXt2zfjNwgAIFPYjDHG2ZUAADzcevTooYsXL2rRokVJhnXq1Em7d+/Wl19+qVatWikyMlLu7u724SVLltTgwYPVu3dv1a5dW8WLF9d3332XquVu3bpV1apV06VLl+Tj42M/e7Vv3z77OG+88YbGjx+vf//9Vzlz5lSvXr3k4uKiL774wj7O+vXr1aBBA125ckUeHh5p3xAAgCyBM0kAgCzNGCObzaZdu3bp8uXLyp07t3x8fOyv8PBwhYWFSZJ27typJk2apDivbdu26YknnlDhwoWVI0cONWjQQJJ04sQJSdKBAwdUo0YNh2lq1arl8PeuXbs0c+ZMhzo0a9ZMCQkJCg8PT89VBwA4SXZnVwAAgNs5cOCAihUrpsuXLytfvnxas2ZNknFy5swpSfL09ExxPleuXFGzZs3UrFkzzZo1SwEBATpx4oSaNWumuLi4VNfn8uXLevHFF9WvX78kwwoXLpzq+QAAsi5CEgAgy/r999+1Z88eDRgwQAULFlRERISyZ8+uokWLJjv+o48+qlWrVqlnz55Jhh08eFDnz5/XuHHjVKhQIUk3L7ezKlu2rJYsWeJQtmnTJoe/K1eurP3796tkyZL3sGYAgKyMy+0AAFlCbGysIiIi9Pfff2v79u0aM2aM2rRpo9atW6tbt24KCQlRrVq11LZtW/366686fvy4NmzYoLfeessedoYPH67vv/9ew4cP14EDB7Rnzx6NHz9e0s2zPG5ubvr000917NgxLVmyRKNHj3aow0svvaQjR45o0KBBOnTokGbPnm3vWS/RkCFDtGHDBvXt21c7d+7UkSNHtHjxYjpuAIAHCCEJAJAlLF++XPny5VPRokXVvHlzrV69Wp988okWL14sFxcX2Ww2/fLLL6pfv7569uyp0qVLq1OnTvrrr78UGBgoSWrYsKHmzZunJUuWqFKlSmrcuLH+/PNPSVJAQIBmzpypefPmqVy5cho3bpw++OADhzoULlxYCxYs0KJFi1SxYkVNnTpVY8aMcRjn0Ucf1dq1a3X48GHVq1dPjz32mIYNG6b8+fNnzoYCAGQ4ercDAAAAAAvOJAEAAACABSEJAAAAACwISQAAAABgQUgCAAAAAAtCEgAAAABYEJIAAAAAwIKQBAAAAAAWhCQAAAAAsCAkAQAAAIAFIQkAAAAALAhJAAAAAGDx/wB76qRQ2MT4oAAAAABJRU5ErkJggg=="/>
+</div>
 </div>
 </div>
 </div>
